@@ -9,12 +9,12 @@
 
 ---
 
-## 📋 Sumário Executivo
+## Sumário Executivo
 Este projeto evolui de uma análise exploratória de 3.199 transações (Nov/Dez 2019, R$ 2,45M em GMV) para um **serviço de decisão antifraude executável**. O objetivo é equilibrar a mitigação severa de prejuízos financeiros (taxa base de chargeback de 23,14% em valor) com o controle rigoroso da fricção operacional.
 
 ---
 
-## 🏗️ Arquitetura e Engenharia do Projeto
+## Arquitetura e Engenharia do Projeto
 
 1. **Análise Exploratória & Baseline:** Identificação de severidade financeira e assimetria de tickets.
 2. **Engenharia Point-in-Time:** Ordenação cronológica estrita por usuário para evitar *data leakage* em features temporais (`minutes_since_last_txn`).
@@ -24,7 +24,7 @@ Este projeto evolui de uma análise exploratória de 3.199 transações (Nov/Dez
 
 ---
 
-## 🚀 Como Subir o Serviço via Docker
+## Como Subir o Serviço via Docker
 
 ### 1. Construir a Imagem Docker
 Na raiz do repositório, execute o comando de build:
