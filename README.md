@@ -9,7 +9,7 @@
 
 ---
 
-## Sumário Executivo
+## Sumário 
 Este projeto evolui de uma análise exploratória de 3.199 transações (Nov/Dez 2019, R$ 2,45M em GMV) para um **serviço de decisão antifraude executável**. O objetivo é equilibrar a mitigação severa de prejuízos financeiros (taxa base de chargeback de 23,14% em valor) com o controle rigoroso da fricção operacional.
 
 ---
@@ -36,7 +36,7 @@ Suba o container mapeando a porta padrão 8000:
 
 Bash
 docker run -d -p 8000:8000 --name fraud-api-container fraud-engine-api
-🔌 Documentação da API (/predict)
+ Documentação da API (/predict)
 O microsserviço recebe uma carga transacional via JSON e retorna a decisão analítica com explainability instantânea e métrica de latência.
 
 Exemplo de Requisição (cURL)
@@ -62,7 +62,7 @@ JSON
   ],
   "latencia_ms": 1.42
 }
-⚠️ Notas Técnicas e Limitações
+  Notas Técnicas e Limitações
 Validação In-Sample: O histórico de risco dos lojistas foi mapeado sobre o período total da amostra; em ambientes de produção corporativa, esta feature requer janelas deslizantes (rolling windows).
 
 Censura à Direita (Right-Censoring): A janela de fechamento em dezembro/2019 introduz atraso de maturação de chargebacks (lag), exigindo o uso de curvas de atraso em cenários reais para evitar subestimação do risco na cauda recente.
