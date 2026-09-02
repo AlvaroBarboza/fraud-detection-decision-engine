@@ -5,7 +5,7 @@
 [![Docker](https://img.shields.io/badge/Docker-Containerized-blue.svg)](https://www.docker.com/)
 [![Status](https://img.shields.io/badge/status-production_ready-success.svg)]()
 
-> **Case sênior de engenharia de dados e risco antifraude**, unindo rigor metodológico (*Point-in-Time*), arquitetura de baixa latência em microsserviço (FastAPI) e conteinerização (Docker) para o ciclo completo de decisão transacional.
+> **Case de engenharia de dados e risco antifraude**, unindo rigor metodológico (*Point-in-Time*), arquitetura de baixa latência em microsserviço (FastAPI) e conteinerização (Docker) para o ciclo completo de decisão transacional.
 
 ---
 
