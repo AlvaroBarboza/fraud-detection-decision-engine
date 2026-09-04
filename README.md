@@ -67,4 +67,4 @@ Validação In-Sample: O histórico de risco dos lojistas foi mapeado sobre o pe
 
 Censura à Direita (Right-Censoring): A janela de fechamento em dezembro/2019 introduz atraso de maturação de chargebacks (lag), exigindo o uso de curvas de atraso em cenários reais para evitar subestimação do risco na cauda recente.
 
-Desenvolvido com rigor técnico de engenharia de dados e risco..
+Desenvolvido com rigor técnico de engenharia de dados e risco.
