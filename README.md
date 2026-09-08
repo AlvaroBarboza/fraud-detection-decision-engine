@@ -9,7 +9,7 @@
 
 ---
 
-## Sumário 
+## Resumo 
 Este projeto evolui de uma análise exploratória de 3.199 transações (Nov/Dez 2019, R$ 2,45M em GMV) para um **serviço de decisão antifraude executável**. O objetivo é equilibrar a mitigação severa de prejuízos financeiros (taxa base de chargeback de 23,14% em valor) com o controle rigoroso da fricção operacional.
 
 ---
