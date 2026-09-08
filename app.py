@@ -15,14 +15,14 @@ class TransactionPayload(BaseModel):
     minutes_since_last_txn: float = Field(..., description="Tempo em minutos desde a última transação do usuário (-1 se primeira)")
     is_first_purchase: bool = Field(..., description="Flag indicando se é a primeira compra do usuário")
 
-# Lista de lojistas de alto risco identificada na análise exploratória do case
+# A lista de lojistas de alto risco identificada na análise exploratória do case
 RISKY_MERCHANTS = [830, 1445, 879, 710, 1341]
 
 @app.post("/predict")
 def evaluate_fraud_risk(transaction: TransactionPayload):
     start_time = time.time()
     
-    # Aplicação do Motor de Regras Multifator
+    # Aplicação da Engine de Fraud
     is_risky_merchant = transaction.merchant_id in RISKY_MERCHANTS
     is_high_velocity_window = (0 <= transaction.minutes_since_last_txn <= 60) and (transaction.transaction_amount > 1000)
     is_risky_onboarding = transaction.is_first_purchase and (transaction.transaction_amount > 2500)
@@ -30,7 +30,7 @@ def evaluate_fraud_risk(transaction: TransactionPayload):
     # Decisão final baseada no motor composto
     predicted_fraud = is_risky_merchant or is_high_velocity_window or is_risky_onboarding
     
-    # Definição de regras acionadas para auditoria/explainability
+    # Definição de regras acionadas para auditoria
     triggered_rules = []
     if is_risky_merchant:
         triggered_rules.append("HIGH_RISK_MERCHANT")
